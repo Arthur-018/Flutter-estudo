@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fokus/app/shared/enums/timer_type.dart';
-import 'package:fokus/app/view/pages/timer_page.dart';
 import '../../shared/utils/app_config.dart';
 
 class HomePage extends StatelessWidget {
@@ -62,7 +61,7 @@ class HomePage extends StatelessWidget {
                           arguments: TimerType.shortBreak,
                         );
 
-                        if (result != null) {
+                        if (result != null && context.mounted) {
                           showDialog(
                             context: context,
                             builder: (context) =>
